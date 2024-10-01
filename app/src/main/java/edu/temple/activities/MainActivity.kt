@@ -41,8 +41,10 @@ class TextSizeAdapter (private val textSizes: Array<Int>, callback: (Int)->Unit)
     // TODO Step 1: Complete onClickListener to return selected number
     inner class TextSizeViewHolder(val textView: TextView) : RecyclerView.ViewHolder (textView) {
         init {
-            textView.setOnClickListener {  }
-        }
+            textView.setOnClickListener {  callback(textSizes[adapterPosition])
+            }
+          }
+        
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TextSizeViewHolder {
